@@ -73,4 +73,5 @@ config.make
 Package.resolved
 Upstream
 *.xcodeproj
+*.build
 
