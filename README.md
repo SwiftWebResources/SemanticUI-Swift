@@ -2,7 +2,7 @@
 
 This repo contains the
 [Semantic UI](https://github.com/Semantic-Org/Semantic-UI)
-CSS distribution, packages up as Swift Package Manager project.
+CSS distribution, packaged up as Swift Package Manager project.
 
 Since the Swift Package Manager cannot yet deal with resource files,
 this is a more convenient way to directly embed common resources
