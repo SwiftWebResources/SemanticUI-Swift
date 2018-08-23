@@ -2,10 +2,10 @@
 import PackageDescription
 
 let package = Package(
-  name: "jQuery",
+  name: "SemanticUI",
   products: [
-    .library(name: "jQuery", targets: ["jQuery"])
+    .library(name: "SemanticUI", targets: ["SemanticUI"])
   ],
   dependencies: [],
-  targets: [ .target(name: "jQuery") ]
+  targets: [ .target(name: "SemanticUI") ]
 )
