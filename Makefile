@@ -32,6 +32,7 @@ package-as-swift : Sources/$(PACKAGE_NAME)/ResourceMap.swift \
 		   Sources/$(PACKAGE_NAME)/Resources.swift
 
 Sources/$(PACKAGE_NAME)/Resources.swift: $($(PACKAGE_NAME)_RESOURCE_FILES) Makefile
+	mkdir -p Sources/$(PACKAGE_NAME)
 	@echo "// Generated on `date`" > $@
 	@echo "//" >> $@
 	@echo "" >> $@
@@ -47,6 +48,7 @@ Sources/$(PACKAGE_NAME)/Resources.swift: $($(PACKAGE_NAME)_RESOURCE_FILES) Makef
 	@echo "}" >> $@
 	
 Sources/$(PACKAGE_NAME)/ResourceMap.swift: $($(PACKAGE_NAME)_RESOURCE_FILES) Makefile
+	mkdir -p Sources/$(PACKAGE_NAME)
 	@echo "// Generated on `date`" > $@
 	@echo "//" >> $@
 	@echo >> $@
