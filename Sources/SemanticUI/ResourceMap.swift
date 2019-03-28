@@ -102,7 +102,7 @@ public extension SemanticUI {
    * - "themes/default/assets/images/flags.png"
    *
    */
-  public static func resourceNamed(_ name: String) -> Data? {
+  static func resourceNamed(_ name: String) -> Data? {
     switch name {
 
       case "semantic.min.css":
