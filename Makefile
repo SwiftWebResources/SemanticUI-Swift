@@ -69,7 +69,7 @@ Sources/$(PACKAGE_NAME)/ResourceMap.swift: $($(PACKAGE_NAME)_RESOURCE_FILES) Mak
 	done
 	@echo "   *" >> $@
 	@echo "   */" >> $@
-	@echo "  public static func resourceNamed(_ name: String) -> Data? {" >> $@
+	@echo "  static func resourceNamed(_ name: String) -> Data? {" >> $@
 	@echo "    switch name {" >> $@
 	@echo >> $@;
 	@for file in $($(PACKAGE_NAME)_RESOURCE_FILES); do \

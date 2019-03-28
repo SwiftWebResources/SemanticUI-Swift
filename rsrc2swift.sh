@@ -18,11 +18,11 @@ FILE_SIZE="$(wc -c <"$RESOURCE_FILE")"
 
 nicename="$(basename ${RESOURCE_FILE} | sed 's/\./_/g' | sed 's/\-/_/g')"
 
-echo "public static let raw_len_${nicename} = ${FILE_SIZE}" >> "${TARGET_FILE}"
+echo "  public static let raw_len_${nicename} = ${FILE_SIZE}" >> "${TARGET_FILE}"
 
-echo -n "public static let ${nicename} : String = \"" >> "${TARGET_FILE}"
+echo -n "  public static let ${nicename} : String = \"" >> "${TARGET_FILE}"
 
 echo -n $(gzip --stdout "${RESOURCE_FILE}" | base64) >> "${TARGET_FILE}"
 
 echo "\"" >> "${TARGET_FILE}"
-echo "public static let data_${nicename} = Data(base64Encoded: ${nicename})!" >> "${TARGET_FILE}"
+echo "  public static let data_${nicename} = Data(base64Encoded: ${nicename})!" >> "${TARGET_FILE}"
