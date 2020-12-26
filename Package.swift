@@ -1,15 +1,11 @@
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
   name: "SemanticUI",
-
-  targets: [ Target(name: "SemanticUI") ],
-
-  dependencies: [
+  products: [
+    .library(name: "SemanticUI", targets: ["SemanticUI"])
   ],
-	
-  exclude: [
-    "Makefile",
-    "README.md"
-  ]
+  dependencies: [],
+  targets: [ .target(name: "SemanticUI") ]
 )
